@@ -63,16 +63,13 @@ def help_command(update: Update, context: CallbackContext) -> None:
 def hello_command(update: Update, context: CallbackContext) -> None:
     """Send a message when the command /hello is issued."""
     try: 
-        global redis1
         logging.info(context.args[0])
         msg = context.args[0]   # /hello keyword <-- this should store the keyword
-        redis1.incr(msg)
         update.message.reply_text('Good day, ' + msg + '!')
     except (IndexError, ValueError):
         update.message.reply_text('Usage: /hello <keyword>')
 
-# I add this comment to ensure at least 2 commits and 
-# declare that the code was done by Ruojie Hao (Student ID: 21415315).
+# The code was done by Ruojie Hao (Student ID: 21415315).
 
 if __name__ == '__main__':
     main()
