@@ -71,6 +71,8 @@ def hello_command(update: Update, context: CallbackContext) -> None:
     except (IndexError, ValueError):
         update.message.reply_text('Usage: /hello <keyword>')
 
+# I add this comment to ensure at least 2 commits and 
+# declare that the code was done by Ruojie Hao (Student ID: 21415315).
 
 if __name__ == '__main__':
     main()
